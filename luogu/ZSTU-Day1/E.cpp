@@ -38,6 +38,7 @@ int main()
             if (i & (1 << j))
             {
                 right_sums[i] += a[mid + j];
+                
             }
         }
     }
