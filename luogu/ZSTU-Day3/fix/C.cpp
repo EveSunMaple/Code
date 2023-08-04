@@ -76,7 +76,7 @@ ll solve()
 int main()
 {
     fastio;
-    freopen("c.in", "r", stdin);
+    // freopen("c.in", "r", stdin);
     // freopen("c.out", "w", stdout);
     // scanf("%d%d", &n, &m);
     cin >> n >> m;

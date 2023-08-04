@@ -124,8 +124,8 @@ ll prepar[N];
 int main()
 {
     fastio;
-    // freopen("D.in", "r", stdin);
-    // freopen("D copy.out", "w", stdout);
+    freopen("D.in", "r", stdin);
+    freopen("D copy.out", "w", stdout);
     cin >> list;
     int len = strlen(list);
     prepar[0] = 1;

@@ -9,8 +9,8 @@
 using namespace std;
 
 ll a[N];
-i128 sum[N];
-i128 mul[N];
+ll sum[N];
+ll mul[N];
 
 int main()
 {

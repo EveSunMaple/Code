@@ -2,7 +2,7 @@
 #include <cstring>
 #include <cstdio>
 #include <time.h>
-#define N 200000
+#define N 20000
 
 using namespace std;
 

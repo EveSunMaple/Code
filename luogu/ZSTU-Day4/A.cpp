@@ -49,7 +49,7 @@ int main()
     ans = min(ans, go_1[0] + go_0[1] + go_0[2] + go_1[3]);// 1 0 0 1
     ans = min(ans, go_1[0] + go_0[1] + go_1[2] + go_0[3]);// 1 0 1 0
     ans = min(ans, go_1[0] + go_1[1] + go_0[2] + go_0[3]);// 1 1 0 0
-    cout << ans;
-
+    // cout << ans;
+    printf("%d", ans);
     return 0;
 }
