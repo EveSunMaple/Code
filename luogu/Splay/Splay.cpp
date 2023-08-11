@@ -33,9 +33,11 @@ struct Node
 int tot;  // 不算重的节点个数
 int root; // 根节点
 
-bool get(int x) { return x == tree[x].ch[1]; }
+bool get(int u) { return u == tree[u].ch[1]; }
 
 void maintain(int u) { tree[u].size = tree[tree[u].ch[0]].size + tree[tree[u].ch[1]].size + tree[u].cnt; }
+
+void clear(int u) { tree[u].ch[0] = tree[u].ch[1] = tree[u].fa = tree[u].fa = tree[u].size = tree[u].cnt = 0; }
 
 void rotate(int u)
 {
@@ -166,7 +168,7 @@ int nxt()
     int now = tree[root].ch[1];
     if (!now) return now;                          // 如果没有右子树，直接返回
     while (tree[now].ch[0]) now = tree[now].ch[0]; // 在右子树中一直向左走
-    splay(now);                                    // 把找到的节点移动到根
+    splay(now, root);                              // 把找到的节点移动到根
     return now;
 }
 
@@ -193,7 +195,7 @@ void del(int k)
         clear(now);              // 删掉原来的根
         return;
     }
-    if (!tree[root].ch[1]) // 如果没有左子树
+    if (!tree[root].ch[1]) // 如果没有右子树
     {
         int now = root;          // 从根开始
         root = tree[root].ch[0]; // 定义新根为左儿子
